@@ -1,0 +1,27 @@
+/test-db.php
+# Local credentials and configuration
+.env
+.env.*
+!.env.example
+/config/database.php
+
+# Dependencies
+/vendor/
+/node_modules/
+
+# Logs and temporary files
+*.log
+*.tmp
+*.bak
+*.swp
+
+# Editor and operating system files
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
+
+# Database backups and local exports
+/database-backups/
+/backups/
+*.sql
