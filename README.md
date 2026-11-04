@@ -1,72 +1,89 @@
+# 📚 StudyFlow – Student Task Manager
 
-# StudyFlow — Student Task Manager
+**StudyFlow** is a web-based Student Task Management System designed to help students organize academic tasks, track deadlines, monitor progress, and manage their daily school activities efficiently.
 
-StudyFlow is a PHP and MySQL web application designed to help students manage academic tasks, deadlines, and productivity.
+## ✨ Features
 
-## Features
+- **Dashboard** – View an overview of tasks and academic activities.
+- **Task Management** – Add, edit, and delete tasks.
+- **Task Completion** – Mark tasks as completed or pending.
+- **Calendar View** – View scheduled tasks according to their due dates.
+- **Task Analytics** – Monitor task completion and productivity.
+- **Overdue Task Monitoring** – Identify pending tasks that have passed their deadlines.
+- **Notifications** – Manage task-related reminders and notifications.
+- **User Authentication** – Secure registration and login.
+- **Profile Management** – Manage your account information.
 
-- User registration and login
-- Secure password hashing
-- Create, edit, delete, and complete tasks
-- Task search and filtering
-- Task priority and status tracking
-- Dashboard statistics and progress tracking
-- Calendar and upcoming deadlines
-- Deadline notifications
-- Profile and password settings
-- Productivity analytics and charts
-- Task completion timestamps
+## 🛠️ Technologies Used
 
-## Technology Stack
+| Technology | Purpose |
+|---|---|
+| HTML5 | Page structure |
+| CSS3 | Styling and layout |
+| JavaScript | Interactive features |
+| Bootstrap | Responsive interface |
+| PHP | Backend development |
+| MySQL | Database management |
+| XAMPP | Local development server |
+| Visual Studio Code | Code editor |
 
-- PHP 8+
-- MySQL / MariaDB
-- PDO
-- HTML5, CSS3, JavaScript
-- Bootstrap 5
-- Bootstrap Icons
-- Chart.js
-- XAMPP
-
-## Local Installation
-
-1. Install and start Apache and MySQL in XAMPP.
-2. Place this project inside the `htdocs` directory.
-3. Open phpMyAdmin at `http://localhost/phpmyadmin`.
-4. Create a database named `student_task_manager`.
-5. Import or execute the database schema required by the application.
-6. Copy `config/database.example.php` to `config/database.php`.
-7. Configure your local database credentials.
-8. Open `http://localhost/student-task-manager/` in your browser.
-9. Register an account and start using StudyFlow.
-
-**Note:** The database schema must include the `users`, `tasks`, and `notifications` tables, including the `completed_at` column in `tasks`.
-
-## Security
-
-- Passwords are hashed before storage.
-- Database queries use PDO prepared statements.
-- Task operations should verify task ownership.
-- State-changing requests use CSRF protection.
-- Local credentials must not be committed to GitHub.
-
-## Project Structure
+## 📂 Project Structure
 
 ```text
 student-task-manager/
+│
 ├── assets/
-│   ├── css/
-│   └── js/
+│   └── css/
+│       └── style.css
+│
 ├── config/
+│   └── database.example.php
+│
 ├── tasks/
+│   ├── add.php
+│   ├── analytics.php
+│   ├── calendar.php
+│   ├── dashboard.php
+│   ├── delete.php
+│   ├── edit.php
+│   ├── notifications.php
+│   ├── profile.php
+│   └── toggle.php
+│
 ├── index.php
 ├── login.php
 ├── logout.php
 ├── register.php
-├── README.md
-└── .gitignore
+└── README.md
 ```
 
-## License
+*Note: The structure above highlights the main project files. Other files and folders may also be included.*
 
-Add a license file if you intend to distribute or allow reuse of this project.
+## ⚙️ Installation and Setup
+
+### 1. Clone the Repository
+
+```bash
+git clone https://github.com/andereymtias-beep/student-task-manager.git
+```
+
+### 2. Move the Project
+
+Place the project folder inside your XAMPP `htdocs` directory.
+
+```text
+C:\xampp\htdocs\student-task-manager
+```
+
+### 3. Start XAMPP
+
+Start the following services:
+
+- Apache
+- MySQL
+
+### 4. Create the Database
+
+1. Open phpMyAdmin at `http://localhost/phpmyadmin`.
+2. Create a new MySQL database.
+3. Import the project's SQL database file, if
